@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    image: node:20.12.2
+    working_dir: /root
+    volumes:
+      - ./app:/root
+    ports:
+      - "8080:8080"
+    command: make dev
