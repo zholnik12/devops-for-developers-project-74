@@ -11,7 +11,7 @@ push:
 
 ci:
 	make env
-	docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
+	APP_COMMAND="sh -c 'make lint && make test'" docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
 env:
 	cp app/.env.example .env
