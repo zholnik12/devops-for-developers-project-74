@@ -1,5 +1,8 @@
 setup:
-	docker run --rm -v $(PWD)/app:/root -w /root node:20.12.2 make setup
+	docker-compose run --rm app make setup
+
+test:
+	docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
 dev:
-	docker run --rm -v $(PWD)/app:/root -w /root -p 8080:8080 node:20.12.2 make dev
+	docker-compose up

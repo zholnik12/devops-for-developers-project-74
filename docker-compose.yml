@@ -2,10 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: node:20.12.2
-    working_dir: /root
-    volumes:
-      - ./app:/root
-    ports:
-      - "8080:8080"
-    command: make dev
+    image: zholnik12/devops-for-developers-project-74
+    build:
+      context: .
+      dockerfile: Dockerfile.production
