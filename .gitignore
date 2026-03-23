@@ -10,3 +10,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 app/node_modules/
+app/.env
+/app/.env
