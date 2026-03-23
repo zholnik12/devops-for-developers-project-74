@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Create .env
-        run: make prepare-env
+        run: make env
 
       - name: Build local image for testing
         run: make build

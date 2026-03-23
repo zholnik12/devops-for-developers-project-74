@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: zholnik12/devops-for-developers-project-74:latest
+    image: ${APP_IMAGE_NAME:-zholnik12/devops-for-developers-project-74}:latest
     build:
       context: .
       dockerfile: Dockerfile.production
